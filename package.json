@@ -1,0 +1,30 @@
+{
+  "type": "module",
+  "name": "practica-integradora",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {
+    "start:prod": "node .",
+    "start:dev": "nodemon -e 'js,handlebars,html' .",
+    "test": "nodemon -e 'js,handlebars,html' test/test.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/express": "^4.17.17",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "eslint": "^8.36.0",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.2",
+    "handlebars": "^4.7.7",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.2",
+    "mongoose-paginate-v2": "^1.7.1",
+    "nodemon": "^2.0.21",
+    "passport": "^0.6.0",
+    "socket.io": "^4.6.1"
+  }
+}
