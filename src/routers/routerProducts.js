@@ -1,19 +1,13 @@
 import { Router } from "express";
+import { productosGetController } from "../controllers/api/productosGetController.js";
 import { productosPostController } from "../controllers/productosPostController.js";
 import { productManager } from "../managers/productManager.js";
+import { autenticacion } from "../middlewares/autenticacion.js";
 
 export const routerProducts = Router();
-routerProducts.post("/", autenticacion, productosPostController);
 
-routerProducts.get("/", async (req,res,next) => {
-    try{
-        const productos = await productManager.encontrar()
-        res.status(201).json(productos)
-    }
-    catch(error){
-        next(error)
-    }
-})
+routerProducts.post("/", autenticacion, productosPostController);
+routerProducts.get("/", productosGetController)
 
 routerProducts.put("/:code", async (req,res,next) => {
         try{
